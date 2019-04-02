@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/action_delete1"
+          android:icon="@drawable/ic_action_delete"
+          android:title="Delete Recording"
+          app:showAsAction="always"/>
+    <item android:id="@+id/action_remind_aud"
+          android:title="Set as reminder"
+          app:showAsAction="never"
+        />
+    <item android:id="@+id/action_share"
+          android:title="Share recording"
+          app:showAsAction="never"
+        />
+    <item android:id="@+id/action_backup"
+          android:title="Create Backup"
+          app:showAsAction="never"
+        />
+</menu>

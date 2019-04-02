@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.android.todolist.RecordActivity"
+    tools:showIn="@layout/activity_record">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Write a short description"
+        android:id="@+id/textView"
+        android:textSize="22sp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"/>
+<ImageButton
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/new_btn"
+    android:src="@drawable/ic_fiber_new_black_48dp"
+    android:layout_below="@id/textView"
+    android:layout_alignParentRight="true"
+    android:background="@null"
+    android:layout_marginRight="5dp"
+    />
+
+
+    <com.example.android.todolist.VisualizerView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:id="@+id/visualizer"
+
+        android:layout_below="@+id/new_btn"
+        android:layout_alignLeft="@+id/textView"
+        android:layout_alignStart="@+id/textView"
+        android:layout_alignRight="@+id/textView"
+        android:layout_alignEnd="@+id/textView" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/time1"
+        android:text="00:00"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="5dp"
+        android:visibility="invisible"
+        android:layout_below="@id/visualizer"/>
+    <SeekBar android:layout_height="wrap_content"
+             android:layout_width="match_parent"
+             android:id="@+id/seek1"
+             android:layout_below="@id/time1"
+             android:visibility="invisible"
+             />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button"
+        android:layout_below="@+id/seek1"
+        android:src="@drawable/ic_mic_black_48dp"
+        android:background="@null"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_mic_off_black_48dp"
+        android:id="@+id/button2"
+        android:background="@null"
+        android:layout_alignTop="@+id/button"
+        android:layout_centerHorizontal="true" />
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/button2"
+        android:layout_alignRight="@+id/textView"
+        android:layout_alignEnd="@+id/textView">
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+      android:src="@drawable/ic_play_circle_filled_black_48dp"
+        android:background="@null"
+        android:id="@+id/button3"
+        />
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_pause_circle_filled_black_48dp"
+            android:background="@null"
+            android:id="@+id/button4"
+            android:visibility="invisible"
+            />
+    </FrameLayout>
+
+
+</RelativeLayout>

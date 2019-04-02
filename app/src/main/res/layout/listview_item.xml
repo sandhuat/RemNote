@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="horizontal"
+              android:background="?android:attr/activatedBackgroundIndicator"
+    >
+<FrameLayout
+    android:id="@+id/frame"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="5dp"
+    android:layout_gravity="center_vertical">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/todolist"
+        android:layout_gravity="center_vertical"
+        android:src="@drawable/ic_format_list_bulleted_black_36dp"
+        />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/note"
+        android:layout_gravity="center_vertical"
+        android:src="@drawable/ic_format_align_justify_black_36dp"
+        android:visibility="invisible"
+        />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/voicelog"
+        android:layout_gravity="center_vertical"
+        android:src="@drawable/ic_mic_black_36dp"
+        android:visibility="invisible"
+        />
+</FrameLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/frame">
+
+        <TextView
+            android:id="@+id/item_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="1dp"
+            android:paddingTop="5dp"
+            android:text="Item Title"
+            android:textSize="20dp"
+            android:layout_marginLeft="6dp"/>
+
+
+        <TextView
+            android:id="@+id/item_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="5dp"
+            android:paddingTop="1dp"
+            android:text="Empty file ...."
+            android:layout_below="@id/item_title"
+            android:textSize="16dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="#999"
+            android:layout_marginLeft="6dp"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:id="@+id/remind"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:src="@drawable/ic_alarm_black_18dp"
+                android:layout_alignParentRight="true"
+                android:visibility="invisible"
+                android:layout_gravity="right"
+                android:background="@android:color/transparent"
+                />
+
+        </RelativeLayout>
+</LinearLayout>

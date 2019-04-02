@@ -1,0 +1,45 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+      xmlns:tools="http://schemas.android.com/tools"
+      tools:context="com.example.android.note_new.MainActivity">
+
+
+      <item android:id="@+id/action_add"
+            android:icon="@drawable/ic_create_white_36dp"
+            android:title="Add Note"
+            app:showAsAction="always"
+         />
+    <item android:id="@+id/action_addq"
+          android:icon="@drawable/ic_format_list_bulleted_white_36dp"
+          android:title="Add ToDo List"
+          app:showAsAction="always"
+        />
+    <item android:id="@+id/action_search"
+          android:title="Search"
+          app:actionViewClass="android.support.v7.widget.SearchView"
+          android:icon="@drawable/ic_search_white_36dp"
+          app:showAsAction="always"/>
+    <item android:id="@+id/action_add23"
+          android:title="Add Note"
+          app:showAsAction="never"
+        />
+      <item android:id="@+id/action_add2"
+            android:title="Add ToDo List"
+            app:showAsAction="never"
+          />
+    <item android:id="@+id/action_record"
+          android:title="Add a voice log"
+          app:showAsAction="never"
+        />
+    <item android:id="@+id/action_delall"
+          android:title="Delete all"
+          app:showAsAction="never"
+        />
+      <item
+          android:id="@+id/action_settings"
+          android:orderInCategory="100"
+          android:title="@string/action_settings"
+          app:showAsAction="never"/>
+
+
+</menu>

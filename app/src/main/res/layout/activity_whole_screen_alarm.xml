@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center"
+    tools:context="com.example.android.todolist.WholeScreenAlarmActivity">
+    <com.skyfishjy.library.RippleBackground
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/content"
+        app:rb_color="#0099CC"
+        app:rb_radius="32dp"
+        app:rb_rippleAmount="4"
+        app:rb_duration="3000"
+        app:rb_scale="6">
+        <ImageView
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_centerInParent="true"
+            android:id="@+id/centerImage"
+            android:src="@drawable/ic_alarm_black_48dp"/>
+    </com.skyfishjy.library.RippleBackground>
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_marginTop="0dp"
+    android:layout_marginBottom="70dp"
+    android:layout_gravity="center_horizontal|bottom"
+    >
+    <Button
+        android:id="@+id/stopAlarm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DISMISS"
+        android:textSize="18sp"
+        android:theme="@style/AppTheme.Button"
+        />
+    <Button
+        android:id="@+id/gotoNote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="See Note"
+        android:textSize="18sp"
+        android:theme="@style/AppTheme.Button"
+
+        />
+
+
+</LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|top"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_marginTop="50dp"
+        >
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text=""
+            android:id="@+id/place_name"
+            android:layout_marginTop="5dp"
+            android:textSize="26sp"/>
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="REMINDER"
+        android:layout_margin="15dp"
+        android:textSize="30sp"/>
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Name of Note"
+            android:layout_margin="15dp"
+android:id="@+id/name_note"
+            android:textSize="24sp"/>
+    </LinearLayout>
+
+</FrameLayout>

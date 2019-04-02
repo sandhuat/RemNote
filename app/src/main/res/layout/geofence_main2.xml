@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                tools:context="com.example.android.todolist.geofence.GeofenceMainActivity2"
+                tools:showIn="@layout/activity_geofence_main2">
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:id="@+id/radius_title"
+        android:text="Radius of area"
+        android:textSize="24sp"
+        android:layout_margin="20dp"
+        android:layout_alignParentLeft="true"/>
+
+    <TextView
+        android:id="@+id/dist_val"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:textSize="24sp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="8dp"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@id/radius_title"
+        android:text="0.01 km"
+        />
+
+    <com.example.android.todolist.HoloCircleSeekBar
+        android:id="@+id/picker"
+        android:layout_width="235dp"
+        android:layout_height="250dp"
+        android:layout_centerInParent="true"
+        app:max="100"
+        app:pointer_color="#131313"
+        app:pointer_halo_color="@color/point_halo_color"
+        app:pointer_size="10dp"
+        app:text_color="#131313"
+        app:text_size="32sp"
+        android:layout_below="@id/dist_val"
+        app:wheel_active_color="#27a191"
+        app:wheel_unactive_color="@color/wheel_unactive_color" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Alarm Tone"
+        android:id="@+id/alarm_tone1"
+        android:textSize="24sp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_below="@id/picker"
+        >
+
+    </TextView>
+
+    <Spinner
+        android:id="@+id/tone_types1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@id/alarm_tone1"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/picker"
+        android:textSize="27sp"
+        android:layout_marginTop="17dp"
+        android:layout_marginRight="10dp"
+        android:layout_alignParentEnd="true"/>
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/alarm_tone1"
+    android:layout_marginTop="30dp"
+    android:orientation="vertical"
+    android:layout_alignParentBottom="true">
+    <Button
+        android:id="@+id/add_geofences_button"
+        android:layout_height="wrap_content"
+        android:text="@string/add_geofences"
+        android:layout_gravity="center"
+        android:textSize="22sp"
+        android:theme="@style/AppTheme.Button"
+        android:layout_width="wrap_content"/>
+
+
+
+</LinearLayout>
+</RelativeLayout>

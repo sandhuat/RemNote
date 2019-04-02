@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/action_loc_remind1"
+          android:icon="@drawable/ic_location_on_white_36dp"
+          android:title="Set Location Reminder"
+          app:showAsAction="always"/>
+    <item android:id="@+id/action_loc_remind"
+          android:title="Set Location Reminder"
+          app:showAsAction="never"
+        />
+    <item android:id="@+id/action_reset"
+          android:title="Reset tone"
+          app:showAsAction="never"
+        />
+
+
+</menu>

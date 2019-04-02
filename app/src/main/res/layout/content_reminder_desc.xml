@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.android.todolist.ReminderDescActivity"
+    tools:showIn="@layout/activity_reminder_desc">
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Reminder Set"
+    android:id="@+id/title"
+    android:textSize="25sp"
+    android:layout_marginTop="10dp"
+    android:layout_marginLeft="10dp"
+    ></TextView>
+
+    <android.support.v7.widget.SwitchCompat
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="false"
+        android:id="@+id/reminderSwitch"
+        android:layout_alignRight="@id/title"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="10dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+
+        android:layout_marginRight="7dp"
+        android:layout_alignParentEnd="true"/>
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        card_view:cardCornerRadius="4dp"
+        android:layout_below="@id/title">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    android:gravity="center">
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:text="Tap to set Reminder"
+            android:textSize="26dp"
+
+
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:text=""
+            android:textSize="22dp"
+            android:layout_height="wrap_content" />
+
+</LinearLayout>
+    </android.support.v7.widget.CardView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Repeat"
+        android:id="@+id/snooze"
+        android:textSize="25sp"
+        android:layout_marginTop="12dp"
+        android:layout_below="@id/card_view"
+        android:layout_marginLeft="10dp"
+
+        ></TextView>
+    <android.support.v7.widget.SwitchCompat
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/card_view"
+        android:layout_alignParentRight="true"
+        android:id="@+id/snoozeSwitch"
+        android:layout_alignParentEnd="true"
+        android:layout_alignRight="@id/snooze"
+        android:layout_marginRight="7dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:layout_marginTop="12dp"
+        >
+    </android.support.v7.widget.SwitchCompat>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:id="@+id/linear"
+        android:orientation="horizontal"
+        android:layout_below="@id/snoozeSwitch">
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/minute_val"
+            android:text="0"
+            android:maxLength="2"
+            android:inputType="number"
+            android:padding="5dp"
+            android:layout_marginLeft="10dp"
+            android:cursorVisible="false"
+
+            />
+        <Spinner
+            android:id="@+id/rem_types"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            />
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        android:layout_below="@id/linear"
+        android:id="@+id/line1"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="5dp"
+
+        android:layout_marginLeft="5dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Alarm Tone"
+        android:id="@+id/alarm_tone"
+        android:textSize="25sp"
+        android:layout_marginTop="17dp"
+        android:layout_below="@id/line1"
+        android:layout_marginLeft="10dp"
+        >
+
+    </TextView>
+    <Spinner
+        android:id="@+id/tone_types"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@id/alarm_tone"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/line1"
+        android:layout_marginTop="10dp"
+        android:padding="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_alignParentEnd="true"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        android:layout_below="@id/tone_types"
+        android:id="@+id/line2"
+        android:layout_marginTop="17dp"
+        android:layout_marginRight="5dp"
+
+        android:layout_marginLeft="5dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="High Priority"
+        android:id="@+id/high_priority"
+        android:textSize="25sp"
+        android:layout_marginTop="17dp"
+        android:layout_below="@id/line2"
+        android:layout_marginLeft="10dp"
+        > </TextView>
+        <android.support.v7.widget.SwitchCompat
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/line2"
+            android:layout_alignParentRight="true"
+            android:id="@+id/priority_switch"
+            android:layout_alignParentEnd="true"
+            android:layout_alignRight="@id/high_priority"
+            android:layout_marginRight="7dp"
+            android:layout_marginTop="25dp"
+            >
+        </android.support.v7.widget.SwitchCompat>
+
+
+
+
+</RelativeLayout>

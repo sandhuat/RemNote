@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.android.todolist.MainActivity"
+    tools:showIn="@layout/activity_main">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical" android:layout_width="fill_parent"
+              android:layout_height="wrap_content">
+    <EditText
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter name of To-do List"
+        android:inputType="textCapSentences|text"
+        android:layout_margin="5dp"
+        android:textSize="20sp"/>
+    <TextView
+        android:id="@+id/date23"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:textStyle="italic"
+        android:textSize="11sp"
+        android:layout_marginRight="5dp"
+        android:text="Freshly Minted"
+        android:layout_gravity="right"
+        />
+    <ListView android:id="@+id/MyList"
+              android:layout_height="wrap_content"
+              android:layout_width="wrap_content"
+              android:descendantFocusability="beforeDescendants">
+    </ListView>
+
+</LinearLayout>
+</RelativeLayout>
