@@ -1,5 +1,5 @@
 # RemNote
-A note taking application with time and location reminders
+A note taking Android application with time and location reminders
 
 
 | | | |
